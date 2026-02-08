@@ -446,7 +446,7 @@ export default function AxisLanding() {
       {/* Footer */}
       <footer className="py-16 md:py-32 relative z-10 px-6 border-t border-white/5 bg-black/40 backdrop-blur-xl snap-start">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
-          <h2 className="text-3xl md:text-6xl font-black mb-12 tracking-tighter italic opacity-80">Axis Protocol.</h2>
+          <h2 className="text-3xl md:text-6xl font-black mb-12 tracking-tighter italic opacity-80">Axis</h2>
           <div className="flex gap-8 md:gap-12 mb-20">
             <a href="https://x.com/Axis_pizza" target="_blank" className="text-white/40 hover:text-gold transition-all hover:scale-110"><XIcon className="w-5 h-5 md:w-6 md:h-6" /></a>
             <a href="https://github.com/muse0509" target="_blank" className="text-white/40 hover:text-gold transition-all hover:scale-110"><Github className="w-5 h-5 md:w-6 md:h-6" /></a>
