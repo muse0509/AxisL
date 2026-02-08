@@ -85,20 +85,3 @@ body {
   @apply relative w-full h-[450px] flex items-end justify-center gap-6 bg-black/20 rounded-[3rem] border border-gold/10 overflow-hidden p-12;
 }
 
-/* スマホ表示用スタイル */
-@media (max-width: 768px) {
-  .auction-container {
-    height: auto; /* 高さを自動調整 */
-    padding: 2rem; /* パディングを調整 */
-  }
-
-  .auction-bid-container {
-    width: 100%; /* 幅を100%に */
-    margin-bottom: 1rem; /* 下にマージンを追加 */
-  }
-
-  .auction-price-label {
-    position: static; /* 配置を解除 */
-    margin-bottom: 0.5rem; /* 下にマージンを追加 */
-  }
-}
