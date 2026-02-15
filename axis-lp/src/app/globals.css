@@ -1,87 +1,117 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Times New Roman", Times, serif;
+  /* タイポグラフィ: 見出しはセリフ、数字はサンセリフでメリハリをつける */
   --font-serif: "Times New Roman", Times, serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
 
-  /* より深く、暗いブロンズ系に統一 */
-  --color-bronze: #78350F; /* 深みのある茶褐色 */
-  --color-gold: #D97706;   /* 落ち着いたゴールド */
-  --color-amber-dark: #451a03; 
-  
-  /* 徹底した黒 */
-  --color-base: #050505; 
-  --color-base-deep: #000000;
-  --color-text-dim: #A8A29E;
-  --color-text-off: #E7E5E4;
+  /* カラーパレット: 画像から抽出した深い黒と鋭いゴールド */
+  --color-obsidian: #050505;
+  --color-charcoal: #0F0F0F;
+  --color-gold-light: #FCD34D; /* 輝くハイライト */
+  --color-gold-base: #D97706;  /* ベースの金 */
+  --color-gold-dark: #78350F;  /* 深いブロンズ */
+  --color-accent-green: #10B981; /* 投資のプラス表示用 */
 
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 40px rgba(120, 53, 15, 0.1); }
-    50% { box-shadow: 0 0 80px rgba(120, 53, 15, 0.2); }
-  }
-
-  @keyframes magma-flow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  /* アニメーション定義 */
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
   }
   
-  @keyframes water-flow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
   }
 }
 
-/* --- 極暗マグマ背景 --- */
-@utility bg-magma-dark {
-  background: 
-    radial-gradient(circle at 50% 10%, rgba(69, 26, 3, 0.15) 0%, transparent 50%),
-    linear-gradient(135deg, #050505 0%, #0a0502 40%, #1a0a05 70%, #050505 100%);
-  background-size: 300% 300%;
-  animation: magma-flow 30s ease infinite;
-}
-
-@utility bg-water-flow {
-  background: linear-gradient(45deg, #050505, #0a0502, #1a0a05, #050505);
-  background-size: 400% 400%;
-  animation: water-flow 15s ease infinite;
-}
-
-
-@utility bg-noise {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-  opacity: 0.3;
-}
-
-@utility tactical-grid {
+/* --- ベース設定 --- */
+body {
+  background-color: var(--color-obsidian);
+  color: #E7E5E4;
+  font-family: var(--font-sans);
   background-image: 
-    linear-gradient(rgba(120, 53, 15, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120, 53, 15, 0.05) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+    radial-gradient(circle at 50% 0%, rgba(120, 53, 15, 0.15), transparent 60%),
+    linear-gradient(to bottom, #000000, #050505);
+  min-height: 100vh;
 }
 
-@utility gradient-text-dark {
-  background: linear-gradient(135deg, #E7E5E4 0%, #D97706 50%, #78350F 100%);
+/* --- 高級ガラスカード (Frame 38の再現) --- */
+@utility card-glass {
+  /* 背景: 半透明の黒 + ノイズ + 上からの微妙な光 */
+  background: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.6) 100%),
+    rgba(10, 10, 10, 0.7);
+  
+  backdrop-filter: blur(24px);
+  border-radius: 24px;
+
+  /* ボーダー: 上部は白っぽく（反射）、下部はゴールド（照り返し） */
+  border: 1px solid transparent;
+  mask-image: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  
+  position: relative;
+  box-shadow: 
+    0 20px 50px -10px rgba(0, 0, 0, 0.8),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* カードの枠線（擬似要素でグラデーションボーダーを作る手法） */
+.card-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px; /* ボーダーの太さ */
+  background: linear-gradient(
+    160deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    rgba(255, 255, 255, 0.05) 30%, 
+    rgba(217, 119, 6, 0.1) 60%, 
+    rgba(217, 119, 6, 0.6) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* 地面の照り返し（アンダーグロー） */
+.card-glass::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 10%;
+  right: 10%;
+  height: 40px;
+  background: radial-gradient(ellipse at center, rgba(217, 119, 6, 0.4), transparent 70%);
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+.card-glass:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.9);
+}
+
+.card-glass:hover::after {
+  opacity: 0.8;
+}
+
+/* --- タイポグラフィユーティリティ --- */
+@utility text-gold-gradient {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FCD34D 40%, #D97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-@utility glass-dark {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(120, 53, 15, 0.15);
+@utility text-glow {
+  text-shadow: 0 0 20px rgba(217, 119, 6, 0.3);
 }
-
-body {
-  background-color: #050505;
-  color: #E7E5E4;
-  -webkit-font-smoothing: antialiased;
-}
-
-.auction-container {
-  @apply relative w-full h-[450px] flex items-end justify-center gap-6 bg-black/20 rounded-[3rem] border border-gold/10 overflow-hidden p-12;
-}
-
