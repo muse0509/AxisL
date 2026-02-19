@@ -304,9 +304,14 @@ const Navbar = () => {
 
         {/* Action & Mobile Menu Toggle */}
         <div className="flex items-center gap-4">
-          <button className="hidden sm:block bg-white/5 border border-white/10 px-5 py-2 rounded-full text-[10px] font-bold uppercase hover:bg-white/10 transition-all text-white/70">
-             Launch App
-          </button>
+        <a 
+          href="https://axs.pizza" // ← ここに実際のアプリのURLを入力してください
+          target="_blank" // 別のタブで開く場合（不要なら削除）
+          rel="noopener noreferrer" // セキュリティ対策（target="_blank"を使う場合推奨）
+          className="hidden sm:block bg-white/5 border border-white/10 px-5 py-2 rounded-full text-[10px] font-bold uppercase hover:bg-white/10 transition-all text-white/70 text-center"
+        >
+          Launch App
+        </a>
           
           <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X /> : <Menu />}

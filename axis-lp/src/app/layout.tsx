@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Axis",
   description: "Your idea, Your ETF",
+  icons: {
+    icon: "/icon.jpg",
+  },
 };
 
 export default function RootLayout({
