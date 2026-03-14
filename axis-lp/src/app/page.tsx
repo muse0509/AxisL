@@ -9,19 +9,27 @@ import Mechanism from "@/components/Mechanism";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
+const Divider = () => (
+  <div className="w-full max-w-[1200px] mx-auto px-6">
+    <div className="h-px bg-gradient-to-r from-transparent via-[#D97706]/20 to-transparent" />
+  </div>
+);
+
 export default function AxisLandingPage() {
   return (
-    <main className="bg-[#050505] text-[#E7E5E4] font-sans w-full min-h-screen relative selection:bg-[#D97706] selection:text-black">
+    <main className="bg-[#0a0a0a] text-[#e5e5e5] font-sans w-full min-h-screen relative">
       <Navbar />
-
       <div className="relative z-10 flex flex-col">
         <Hero />
+        <Divider />
         <WhyAxis />
+        <Divider />
         <HowItWorks />
+        <Divider />
         <Mechanism />
+        <Divider />
         <CTA />
       </div>
-
       <Footer />
     </main>
   );
