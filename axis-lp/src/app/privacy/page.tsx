@@ -1,5 +1,20 @@
 import React from "react";
+import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy – Axis",
+  description: "Learn how Axis handles your data and protects your privacy.",
+  openGraph: {
+    title: "Privacy Policy – Axis",
+    description: "Learn how Axis handles your data and protects your privacy.",
+    url: "https://axis-protocol.xyz/privacy",
+  },
+  twitter: {
+    title: "Privacy Policy – Axis",
+    description: "Learn how Axis handles your data and protects your privacy.",
+  },
+};
 
 export default function PrivacyPolicy() {
   return (

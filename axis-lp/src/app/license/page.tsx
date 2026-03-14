@@ -1,5 +1,20 @@
 import React from "react";
+import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "License – Axis",
+  description: "License information for the Axis protocol and platform.",
+  openGraph: {
+    title: "License – Axis",
+    description: "License information for the Axis protocol and platform.",
+    url: "https://axis-protocol.xyz/license",
+  },
+  twitter: {
+    title: "License – Axis",
+    description: "License information for the Axis protocol and platform.",
+  },
+};
 
 export default function License() {
   return (
