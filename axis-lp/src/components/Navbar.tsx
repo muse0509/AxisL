@@ -15,19 +15,24 @@ export default function Navbar() {
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    } else {
+      // Navigate to homepage with hash if not on the homepage
+      window.location.href = `/#${id}`;
+    }
   };
 
   return (
     <nav className="fixed top-0 w-full z-50 px-6 py-4 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/[0.04]">
       <div className="max-w-[1200px] mx-auto flex justify-between items-center">
-        <button
-          onClick={() => scrollTo("hero")}
+        <a
+          href="/"
           className="hover:opacity-80 transition-opacity"
         >
           <img src="/logo.png" alt="Axis" className="h-10 w-auto" />
-        </button>
+        </a>
 
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((item) => (
