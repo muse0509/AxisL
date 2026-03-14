@@ -31,7 +31,7 @@ body {
 
 /* --- Flat dark card --- */
 @utility card-dark {
-  background: #141414;
+  background: #111111;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
   transition: border-color 0.2s ease;
@@ -41,9 +41,9 @@ body {
   border-color: rgba(217, 119, 6, 0.3);
 }
 
-/* Keep card-glass as alias for pages that still use it (ambassador) */
+/* Card-glass alias for ambassador page */
 @utility card-glass {
-  background: #141414;
+  background: #111111;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
   position: relative;
@@ -54,16 +54,19 @@ body {
   border-color: rgba(217, 119, 6, 0.3);
 }
 
-/* --- Gold text --- */
+/* --- Gold accent text (headings, brand) --- */
 @utility text-gold-gradient {
-  color: #FCD34D;
+  background: linear-gradient(135deg, #FFFBEB 0%, #FCD34D 40%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @utility text-glow {
   text-shadow: 0 0 30px rgba(217, 119, 6, 0.4);
 }
 
-/* --- Primary CTA button --- */
+/* --- Primary CTA button (gold) --- */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -81,7 +84,7 @@ body {
 
 .btn-primary:hover {
   background: #fde68a;
-  box-shadow: 0 0 40px rgba(252, 211, 77, 0.3);
+  box-shadow: 0 0 40px rgba(252, 211, 77, 0.25);
 }
 
 .btn-primary:active {
@@ -106,7 +109,7 @@ body {
 
 .btn-liquid-glass:hover {
   background: #fde68a;
-  box-shadow: 0 0 40px rgba(252, 211, 77, 0.3);
+  box-shadow: 0 0 40px rgba(252, 211, 77, 0.25);
 }
 
 /* --- Secondary button --- */

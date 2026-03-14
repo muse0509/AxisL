@@ -118,7 +118,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FCD34D]/10 border border-[#FCD34D]/20 mb-8"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D97706]/10 border border-[#D97706]/20 mb-8"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#FCD34D]" />
           <span className="text-[#FCD34D] text-xs font-semibold tracking-tight">Live on Solana</span>
@@ -132,7 +132,7 @@ export default function Hero() {
         >
           Your idea.
           <br />
-          <span className="text-[#FCD34D]">Your ETF.</span>
+          <span className="text-gold-gradient italic">Your ETF.</span>
         </motion.h1>
 
         <motion.p

@@ -106,8 +106,8 @@ const AuctionCycleAnimation = () => {
             className="flex flex-col items-center w-full z-10"
           >
             <div className="flex items-center gap-2 mb-8">
-              <Zap size={14} className="text-emerald-400" />
-              <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">Phase 2: Value Capture</span>
+              <Zap size={14} className="text-[#FCD34D]" />
+              <span className="text-[#FCD34D] text-xs font-bold uppercase tracking-widest">Phase 2: Value Capture</span>
             </div>
             <div className="flex gap-6 items-center justify-center w-full px-4">
               <div className="w-28 sm:w-36 p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col items-center opacity-50">
