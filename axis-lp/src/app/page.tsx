@@ -11,9 +11,8 @@ import Footer from "@/components/Footer";
 
 export default function AxisLandingPage() {
   return (
-    <main className="bg-[#050505] text-[#E7E5E4] font-sans w-full min-h-screen relative selection:bg-[#D97706] selection:text-black">
+    <main className="bg-[#0a0a0a] text-[#e5e5e5] font-sans w-full min-h-screen relative">
       <Navbar />
-
       <div className="relative z-10 flex flex-col">
         <Hero />
         <WhyAxis />
@@ -21,7 +20,6 @@ export default function AxisLandingPage() {
         <Mechanism />
         <CTA />
       </div>
-
       <Footer />
     </main>
   );

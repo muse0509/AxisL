@@ -20,48 +20,48 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-black/10 border-b border-white/5">
-      <div className="max-w-[1440px] mx-auto flex justify-between items-center">
+    <nav className="fixed top-0 w-full z-50 px-6 py-4 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/[0.04]">
+      <div className="max-w-[1200px] mx-auto flex justify-between items-center">
         <button
           onClick={() => scrollTo("hero")}
           className="hover:opacity-80 transition-opacity"
         >
-          <img src="/logo.png" alt="Axis" className="h-12 w-auto" />
+          <img src="/logo.png" alt="Axis" className="h-10 w-auto" />
         </button>
 
-        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        <div className="hidden md:flex items-center gap-6">
           {navLinks.map((item) => (
             <button
               key={item.name}
               onClick={() => scrollTo(item.id)}
-              className="text-sm font-medium text-white/50 hover:text-white transition-colors"
+              className="text-[13px] font-medium text-white/40 hover:text-white transition-colors tracking-tight"
             >
               {item.name}
             </button>
           ))}
           <a
             href="/ambassador"
-            className="text-sm font-medium text-white/50 hover:text-white transition-colors flex items-center gap-1.5"
+            className="text-[13px] font-medium text-white/40 hover:text-white transition-colors tracking-tight flex items-center gap-1.5"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D97706] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FCD34D]" />
             Ambassador
           </a>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <a
             href="https://axs.pizza"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded-full border border-[#D97706]/40 text-[#FCD34D] hover:bg-[#D97706]/10 transition-all"
+            className="hidden md:inline-flex text-[13px] font-semibold px-4 py-2 rounded-lg bg-[#FCD34D] text-black hover:bg-[#fde68a] transition-colors tracking-tight"
           >
             Launch App
           </a>
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white/60"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X /> : <Menu />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -72,13 +72,13 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg border-b border-white/10 overflow-hidden md:hidden"
+            className="absolute top-full left-0 w-full bg-[#0a0a0a] border-b border-white/[0.04] overflow-hidden md:hidden"
           >
-            <div className="p-6 flex flex-col gap-4">
+            <div className="p-5 flex flex-col gap-1">
               {navLinks.map((item) => (
                 <button
                   key={item.name}
-                  className="text-left text-xl font-serif text-white/70 py-3 border-b border-white/5"
+                  className="text-left text-base text-white/60 py-3 hover:text-white transition-colors tracking-tight"
                   onClick={() => scrollTo(item.id)}
                 >
                   {item.name}
@@ -86,16 +86,16 @@ export default function Navbar() {
               ))}
               <a
                 href="/ambassador"
-                className="text-left text-xl font-serif text-white/70 py-3 border-b border-white/5 flex items-center gap-2"
+                className="text-left text-base text-white/60 py-3 hover:text-white transition-colors tracking-tight flex items-center gap-2"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#D97706] animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FCD34D]" />
                 Ambassador
               </a>
               <a
                 href="https://axs.pizza"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 text-center text-sm font-bold uppercase tracking-wider px-5 py-3 rounded-full border border-[#D97706]/40 text-[#FCD34D] hover:bg-[#D97706]/10 transition-all"
+                className="mt-3 text-center text-[13px] font-semibold px-4 py-3 rounded-lg bg-[#FCD34D] text-black hover:bg-[#fde68a] transition-colors tracking-tight"
               >
                 Launch App
               </a>
