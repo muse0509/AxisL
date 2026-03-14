@@ -1,5 +1,20 @@
 import React from "react";
+import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Terms of Service – Axis",
+  description: "Read the Axis Terms of Service governing your use of the platform.",
+  openGraph: {
+    title: "Terms of Service – Axis",
+    description: "Read the Axis Terms of Service governing your use of the platform.",
+    url: "https://axis-protocol.xyz/terms",
+  },
+  twitter: {
+    title: "Terms of Service – Axis",
+    description: "Read the Axis Terms of Service governing your use of the platform.",
+  },
+};
 
 export default function TermsOfService() {
   return (
