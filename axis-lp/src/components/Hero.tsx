@@ -131,7 +131,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="font-sans font-black text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-0.04em] text-white mb-5"
+          className="font-sans font-black text-6xl sm:text-8xl md:text-9xl leading-[0.95] tracking-[-0.04em] text-white mb-6"
         >
           Your idea.
           <br />
@@ -142,7 +142,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-base sm:text-lg text-white/50 tracking-tight mb-10 max-w-lg"
+          className="text-lg sm:text-xl md:text-2xl text-white/50 tracking-tight mb-12 max-w-xl"
         >
           The first onchain index funds. Build, manage, and scale your index fund in seconds.
         </motion.p>

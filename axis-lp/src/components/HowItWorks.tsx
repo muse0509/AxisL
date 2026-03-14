@@ -73,8 +73,8 @@ export default function HowItWorks() {
           <div key={step.id} className="flex flex-col items-center text-center gap-6">
             <div className="space-y-3">
               <span className="text-[#FCD34D] text-sm font-bold font-mono">{step.number}</span>
-              <h3 className="text-2xl font-bold text-white tracking-tight">{step.title}</h3>
-              <p className="text-white/40 text-sm leading-relaxed max-w-xs mx-auto">{step.desc}</p>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">{step.title}</h3>
+              <p className="text-white/40 text-sm sm:text-base leading-relaxed max-w-xs mx-auto">{step.desc}</p>
             </div>
             <div className="w-[220px]">
               <PhoneMockup>

@@ -17,7 +17,7 @@ export default function CTA() {
         <h2 className="text-3xl sm:text-5xl font-black text-white mb-4 tracking-[-0.03em]">
           Start building.
         </h2>
-        <p className="text-white/40 text-base mb-8 max-w-md mx-auto">
+        <p className="text-white/40 text-base sm:text-lg mb-8 max-w-md mx-auto">
           Whether you&apos;re investing or creating — Axis is permissionless and live on Solana.
         </p>
         <div className="flex items-center justify-center gap-3">

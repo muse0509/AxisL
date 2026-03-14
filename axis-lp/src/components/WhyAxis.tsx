@@ -53,10 +53,10 @@ export default function WhyAxis() {
               <div className="w-10 h-10 rounded-lg bg-[#FCD34D]/10 flex items-center justify-center text-[#FCD34D] mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-base font-bold text-white mb-2 tracking-tight">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2 tracking-tight">
                 {feature.title}
               </h3>
-              <p className="text-sm text-white/40 leading-relaxed">
+              <p className="text-sm sm:text-base text-white/40 leading-relaxed">
                 {feature.desc}
               </p>
             </motion.div>

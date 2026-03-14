@@ -39,14 +39,14 @@ export default function Navbar() {
             <button
               key={item.name}
               onClick={() => scrollTo(item.id)}
-              className="text-[13px] font-medium text-white/40 hover:text-white transition-colors tracking-tight"
+              className="text-sm font-medium text-white/40 hover:text-white transition-colors tracking-tight"
             >
               {item.name}
             </button>
           ))}
           <a
             href="/ambassador"
-            className="text-[13px] font-medium text-white/40 hover:text-white transition-colors tracking-tight flex items-center gap-1.5"
+            className="text-sm font-medium text-white/40 hover:text-white transition-colors tracking-tight flex items-center gap-1.5"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#FCD34D]" />
             Ambassador
@@ -58,7 +58,7 @@ export default function Navbar() {
             href="https://axs.pizza"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex text-[13px] font-semibold px-4 py-2 rounded-lg bg-[#FCD34D] text-black hover:bg-[#fde68a] transition-colors tracking-tight"
+            className="hidden md:inline-flex text-sm font-semibold px-4 py-2 rounded-lg bg-[#FCD34D] text-black hover:bg-[#fde68a] transition-colors tracking-tight"
           >
             Launch App
           </a>
@@ -100,7 +100,7 @@ export default function Navbar() {
                 href="https://axs.pizza"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 text-center text-[13px] font-semibold px-4 py-3 rounded-lg bg-[#FCD34D] text-black hover:bg-[#fde68a] transition-colors tracking-tight"
+                className="mt-3 text-center text-sm font-semibold px-4 py-3 rounded-lg bg-[#FCD34D] text-black hover:bg-[#fde68a] transition-colors tracking-tight"
               >
                 Launch App
               </a>

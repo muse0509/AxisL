@@ -29,13 +29,13 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-white/[0.04]">
-          <div className="flex flex-wrap justify-center gap-5 text-[11px] text-white/20 font-medium">
+          <div className="flex flex-wrap justify-center gap-5 text-xs text-white/20 font-medium">
             <a href="/privacy" className="hover:text-[#D97706] transition-colors">Privacy</a>
             <a href="/terms" className="hover:text-[#D97706] transition-colors">Terms</a>
             <a href="/license" className="hover:text-[#D97706] transition-colors">License</a>
             <a href="/copyright" className="hover:text-[#D97706] transition-colors">Copyright</a>
           </div>
-          <p className="text-[11px] text-white/15 font-mono">&copy; 2026 Axis</p>
+          <p className="text-xs text-white/15 font-mono">&copy; 2026 Axis</p>
         </div>
       </div>
     </footer>

@@ -157,7 +157,7 @@ export default function Mechanism() {
             Don&apos;t pay for rebalancing.{" "}
             <span className="text-[#FCD34D]">Get paid for it.</span>
           </h2>
-          <p className="text-sm sm:text-base text-white/40 leading-relaxed max-w-md mx-auto lg:mx-0">
+          <p className="text-sm sm:text-base lg:text-lg text-white/40 leading-relaxed max-w-md mx-auto lg:mx-0">
             Traditional AMMs leak value to arbitrage bots. Axis internalizes
             this leakage through a License Auction, turning loss into yield for fund creators and LPs.
           </p>
