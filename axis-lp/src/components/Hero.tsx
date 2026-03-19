@@ -130,8 +130,9 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="font-sans font-black text-6xl sm:text-8xl md:text-9xl leading-[0.95] tracking-[-0.04em] text-white mb-6"
+
+          transition={{ delay: 0.35, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="font-serif font-bold text-7xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1] tracking-tighter text-white mb-6 drop-shadow-2xl"
         >
           Your idea.
           <br />
