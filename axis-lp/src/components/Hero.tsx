@@ -188,7 +188,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="font-serif font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1] tracking-tighter text-white mb-6 drop-shadow-2xl"
+          className="font-serif font-bold text-7xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1] tracking-tighter text-white mb-6 drop-shadow-2xl"
         >
           Your idea.
           <br />
