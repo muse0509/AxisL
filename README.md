@@ -4,6 +4,8 @@ The official landing page for [Axis Protocol](https://axis-protocol.xyz) — the
 
 **Live:** [axis-protocol.xyz](https://axis-protocol.xyz)
 
+**Repo:** [Axis-pizza/AxisLP](https://github.com/Axis-pizza/AxisLP)
+
 ## Overview
 
 Axis lets you discover, create, and invest in on-chain index funds (ETFs) on Solana. This landing page introduces the protocol with:
@@ -24,7 +26,7 @@ Axis lets you discover, create, and invest in on-chain index funds (ETFs) on Sol
 | Animations | Framer Motion |
 | 3D | Three.js + React Three Fiber |
 | Font | Lora (Google Fonts) |
-| Deploy | Cloudflare Pages |
+| Deploy | Cloudflare Pages (auto-deploy on push to main) |
 
 ## Getting Started
 
@@ -82,15 +84,12 @@ src/
 
 ## Deployment
 
-Deployed to Cloudflare Pages:
+Deployed to **Cloudflare Pages** with automatic deploys:
 
-```bash
-npm run build
-npx wrangler pages deploy out
-```
-
-Build command: `npm run build`
-Output directory: `out`
+- **Production:** Pushes to `main` auto-deploy to [axis-protocol.xyz](https://axis-protocol.xyz)
+- **Previews:** Every PR gets a unique preview URL with a Cloudflare bot comment
+- **Build command:** `npm run build`
+- **Output directory:** `out`
 
 ## Related
 
